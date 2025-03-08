@@ -34,7 +34,7 @@ public class HalamanUtama extends JFrame implements ActionListener {
         labelSelamatDatang.setText("Selamat Datang " + username);
         labelSelamatDatang.setFont(new Font("Arial", Font.BOLD, 20));  
         labelSelamatDatang.setForeground(Color.WHITE);
-        labelSelamatDatang.setBounds(20,20,300,20);
+        labelSelamatDatang.setBounds(20,20,300,30);
 
         labelPembuka.setFont(new Font("Arial", Font.BOLD, 12));  
         labelPembuka.setForeground(Color.WHITE);
