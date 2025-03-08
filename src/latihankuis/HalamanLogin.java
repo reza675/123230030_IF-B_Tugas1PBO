@@ -15,16 +15,13 @@ import java.awt.event.ActionEvent;
  * @author ASUS
  */
 public class HalamanLogin extends JFrame implements ActionListener {
-    // Membuat label
     JLabel usernameLabel = new JLabel("Username: ");
     JLabel passwordLabel = new JLabel("Password: ");
     JLabel labelLogin = new JLabel("Login Page");
 
-    // Membuat input field
     JTextField usernameTextField = new JTextField();
     JPasswordField passwordTextField = new JPasswordField();
 
-    // Membuat tombol login dan reset
     JButton buttonLogin = new JButton("Login");
     JButton resetLogin = new JButton("Reset");
 
@@ -36,21 +33,16 @@ public class HalamanLogin extends JFrame implements ActionListener {
         setAlwaysOnTop(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
+        getContentPane().setBackground(new Color(50, 50, 50));
 
-        // Mengubah warna background frame
-        getContentPane().setBackground(new Color(50, 50, 50)); // Warna abu gelap
-
-        // Menyesuaikan warna label
         labelLogin.setForeground(Color.WHITE);
         usernameLabel.setForeground(Color.WHITE);
         passwordLabel.setForeground(Color.WHITE);
         
-        // Mengatur font label
         labelLogin.setFont(new Font("Arial", Font.BOLD, 20));
         usernameLabel.setFont(new Font("Arial", Font.BOLD, 14));
         passwordLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
-        // Menambahkan komponen ke dalam frame
         add(labelLogin);
         add(usernameLabel);
         add(passwordLabel);
@@ -59,7 +51,6 @@ public class HalamanLogin extends JFrame implements ActionListener {
         add(buttonLogin);
         add(resetLogin);
 
-        // Mengatur posisi komponen
         labelLogin.setBounds(180, 20, 160, 30);
         usernameLabel.setBounds(20, 80, 100, 20);
         usernameTextField.setBounds(20, 105, 420, 32);
@@ -70,16 +61,14 @@ public class HalamanLogin extends JFrame implements ActionListener {
         buttonLogin.setBounds(120, 230, 100, 40);
         resetLogin.setBounds(240, 230, 100, 40);
 
-        // Menambahkan efek hover pada tombol
-        buttonLogin.setBackground(new Color(0, 150, 0)); // Hijau
+        buttonLogin.setBackground(new Color(0, 150, 0));
         buttonLogin.setForeground(Color.WHITE);
         buttonLogin.setFont(new Font("Arial", Font.BOLD, 14));
         
-        resetLogin.setBackground(new Color(200, 0, 0)); // Merah
+        resetLogin.setBackground(new Color(200, 0, 0));
         resetLogin.setForeground(Color.WHITE);
         resetLogin.setFont(new Font("Arial", Font.BOLD, 14));
 
-        // Menambahkan event listener untuk tombol login dan reset
         buttonLogin.addActionListener(this);
         resetLogin.addActionListener(this);
         
@@ -92,13 +81,10 @@ public class HalamanLogin extends JFrame implements ActionListener {
                 String username = usernameTextField.getText();
                 String password = new String(passwordTextField.getPassword());
 
-                // Contoh validasi sederhana
                 if (username.equals("123230030") && password.equals("pass12345")) {
                     JOptionPane.showMessageDialog(this, "Login Berhasil!");
-
-                    // Memanggil halaman baru dengan parameter username
                     new HalamanUtama(username);
-                    this.dispose(); // Menutup halaman login
+                    this.dispose();
                 } else {
                     JOptionPane.showMessageDialog(this,"username atau password tidak valid");
                 }

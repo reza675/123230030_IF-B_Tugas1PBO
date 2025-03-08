@@ -31,7 +31,6 @@ public class HalamanUtama extends JFrame implements ActionListener {
         setLayout(null);
         getContentPane().setBackground(new Color(50, 50, 50));
 
-        // Buat label
         labelSelamatDatang.setText("Selamat Datang " + username);
         labelSelamatDatang.setFont(new Font("Arial", Font.BOLD, 20));  
         labelSelamatDatang.setForeground(Color.WHITE);
@@ -40,7 +39,6 @@ public class HalamanUtama extends JFrame implements ActionListener {
         labelPembuka.setFont(new Font("Arial", Font.BOLD, 12));  
         labelPembuka.setForeground(Color.WHITE);
         labelPembuka.setBounds(20,60,360,20);
-
 
         buttonMajalahAnak.setBounds(20, 120, 400, 40);
         buttonMajalahAnak.setBackground(Color.BLUE);
@@ -57,13 +55,12 @@ public class HalamanUtama extends JFrame implements ActionListener {
         buttonMajalahDewasa.setForeground(Color.WHITE);
         buttonMajalahDewasa.setFont(new Font("Arial", Font.BOLD, 16));
 
-        // Tambahkan ke frame
         add(labelSelamatDatang);
         add(labelPembuka);
         add(buttonMajalahAnak);
         add(buttonMajalahDewasa);
         add(buttonMajalahRemaja);
-        // Tambahkan event listener ke button
+
         buttonMajalahAnak.addActionListener(this);
         buttonMajalahRemaja.addActionListener(this);
         buttonMajalahDewasa.addActionListener(this);

@@ -37,8 +37,6 @@ public class HalamanPembelian extends JFrame implements ActionListener{
     int hargaMajalah;
     String username;
 
-    
-
     HalamanPembelian(String username,String jenisMajalah, int hargaMajalah){
         this.username = username;
         this.hargaMajalah = hargaMajalah;
@@ -52,7 +50,7 @@ public class HalamanPembelian extends JFrame implements ActionListener{
         getContentPane().setBackground(new Color(50, 50, 50));
 
         DecimalFormatSymbols simbol = new DecimalFormatSymbols();
-        simbol.setGroupingSeparator('.'); // Pemisah ribuan menjadi titik
+        simbol.setGroupingSeparator('.');
         DecimalFormat formatRupiah = new DecimalFormat("#,###", simbol);
         
         labelPembuka.setFont(new Font("Arial", Font.BOLD, 20));  
@@ -120,7 +118,7 @@ public void actionPerformed(ActionEvent e) {
             int totalHarga = hargaMajalah * jumlahPembelian;
 
             DecimalFormatSymbols simbol = new DecimalFormatSymbols();
-            simbol.setGroupingSeparator('.'); // Pemisah ribuan menjadi titik
+            simbol.setGroupingSeparator('.');
             DecimalFormat formatRupiah = new DecimalFormat("#,###", simbol);
 
             labelTotalPembelian.setFont(new Font("Arial", Font.BOLD, 18));
