@@ -117,6 +117,9 @@ public void actionPerformed(ActionEvent e) {
             int jumlahPembelian = Integer.parseInt(jumlahPembelianTextField.getText());
             int totalHarga = hargaMajalah * jumlahPembelian;
 
+            if(jumlahPembelian < 1){
+                throw new NumberFormatException();
+            }
             DecimalFormatSymbols simbol = new DecimalFormatSymbols();
             simbol.setGroupingSeparator('.');
             DecimalFormat formatRupiah = new DecimalFormat("#,###", simbol);

@@ -5,7 +5,7 @@
 package latihankuis;
 /**
  *
- * @author ASUS
+ * @author ASUS 
  */
 public class Main {
 
